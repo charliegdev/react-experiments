@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MouseTracker from './MouseTracker';
+import MouseTracker from './MouseTracker2';
 import './App.css';
 
 class App extends Component {

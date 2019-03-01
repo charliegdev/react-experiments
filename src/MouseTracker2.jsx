@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import Cat from './Cat';
 
-const MouseTracker = () => {
+const MouseWithCat = () => {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
 
@@ -9,15 +10,12 @@ const MouseTracker = () => {
     setY(clientY);
   };
 
+  // Instead of displaying an <h1 /> and <p />, just diplay this <Cat />.
   return (
     <div style={{ height: '100vh', width: '100vw' }} onMouseMove={handleMouseMove}>
-      <h1>Move the mouse and see its coordinate!</h1>
-      <p>The current mouse position is:</p>
-      <p>
-        x: {x} y: {y}
-      </p>
+      <Cat mouse={{ x, y }} />
     </div>
   );
 };
 
-export default MouseTracker;
+export default MouseWithCat;
